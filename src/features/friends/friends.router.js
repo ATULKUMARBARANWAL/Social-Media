@@ -1,0 +1,10 @@
+import express from "express";
+import FriendsController from "./friends.controller.js";
+const friendsRouter=express.Router();
+const friendsController=new FriendsController();
+friendsRouter.post("/addFriend",friendsController.addFriend);
+friendsRouter.get("/viewAllFriendReq",friendsController.viewAllFriendReq);
+friendsRouter.get("/viewAllFriend",friendsController.viewAllFriend);
+friendsRouter.post("/acceptFriendReq",friendsController.acceptFriendReq);
+friendsRouter.get("viewAllPerson",friendsController.viewAllPerson);
+export default friendsRouter;
